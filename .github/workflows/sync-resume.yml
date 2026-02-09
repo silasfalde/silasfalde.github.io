@@ -2,8 +2,8 @@ name: Sync Resume PDF
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "0 3 * * *"
+  repository_dispatch:
+    types: [resume-updated]
 
 jobs:
   sync:
