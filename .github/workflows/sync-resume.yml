@@ -1,0 +1,32 @@
+name: Sync Resume PDF
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 3 * * *"
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout website repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Download latest resume PDF
+        run: |
+          mkdir -p assets
+          curl -L -o assets/resume.pdf https://raw.githubusercontent.com/silasfalde/resume/main/resume.pdf
+
+      - name: Commit and push if changed
+        run: |
+          if git diff --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/resume.pdf
+          git commit -m "chore: sync resume pdf"
+          git push
