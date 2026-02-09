@@ -160,6 +160,10 @@ body {
     margin-top: var(--space-md);
   }
 
+  .resume__embed iframe {
+    height: 70vh;
+  }
+
   .scroll-indicator {
     bottom: var(--space-sm);
     font-size: 0.7rem;
@@ -301,6 +305,10 @@ body {
   .timeline__item {
     margin-bottom: var(--space-lg);
     padding-bottom: var(--space-lg);
+  }
+
+  .resume__embed iframe {
+    height: 60vh;
   }
 
   .timeline__header {
