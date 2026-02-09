@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="maize" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD54F"/>
+      <stop offset="50%" stop-color="#FFCB05"/>
+      <stop offset="100%" stop-color="#E6B800"/>
+    </linearGradient>
+  </defs>
+  <!-- Official Michigan Wolverines Block M (Wikimedia Commons) scaled to fit -->
+  <g transform="translate(50,50) scale(0.34) translate(-147,-106)">
+    <g transform="matrix(1.25 0 0 -1.25 -123.87 786.33)">
+      <g transform="matrix(2.5 0 0 2.5 -323.12 -814.35)">
+        <path d="m234.43 576.97-18.42-25.467-18.389 25.467h-28.368v-20.011h7.027v-27.304h-7.027v-20.01h36.173v20.01h-7.495v15.67l17.982-24.726 18.207 24.747v-15.691h-7.495v-20.01h36.173v20.01h-7.027v27.304h7.027v20.011h-28.368z" fill="#00274c"/>
+        <path d="m261.29 558.47v16.998h-26.092l-19.191-26.532-19.157 26.532h-26.092v-16.998h7.027v-30.317h-7.027v-16.998h33.161v16.998h-7.496v21.807l19.495-26.806 19.707 26.785v-21.786h-7.495v-16.998h33.16v16.998h-7.027v30.317h7.027" fill="#f5c300"/>
+      </g>
+    </g>
+  </g>
+  <text x="50" y="50" font-family="Georgia, 'Times New Roman', serif" font-size="36" font-weight="700" fill="#ffffff" text-anchor="middle" dominant-baseline="central">SF</text>
+</svg>

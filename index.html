@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Resume and portfolio of Silas Falde — Data Science major at the University of Michigan." />
+    <title>Silas Falde — Data Science</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/sections.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body id="top">
+    <header class="header">
+      <a href="/" class="header__brand" aria-label="Silas Falde">
+        <svg class="header__logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 72" fill="none" height="54" aria-hidden="true">
+          <defs>
+            <linearGradient id="header-logo-maize" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FFD54F"/>
+              <stop offset="50%" stop-color="#FFCB05"/>
+              <stop offset="100%" stop-color="#E6B800"/>
+            </linearGradient>
+          </defs>
+          <g transform="translate(36,36) scale(0.24) translate(-147,-106)">
+            <g transform="matrix(1.25 0 0 -1.25 -123.87 786.33)">
+              <g transform="matrix(2.5 0 0 2.5 -323.12 -814.35)">
+                <path d="m234.43 576.97-18.42-25.467-18.389 25.467h-28.368v-20.011h7.027v-27.304h-7.027v-20.01h36.173v20.01h-7.495v15.67l17.982-24.726 18.207 24.747v-15.691h-7.495v-20.01h36.173v20.01h-7.027v27.304h7.027v20.011h-28.368z" fill="#00274c"/>
+                <path d="m261.29 558.47v16.998h-26.092l-19.191-26.532-19.157 26.532h-26.092v-16.998h7.027v-30.317h-7.027v-16.998h33.161v16.998h-7.496v21.807l19.495-26.806 19.707 26.785v-21.786h-7.495v-16.998h33.16v16.998h-7.027v30.317h7.027" fill="#f5c300"/>
+              </g>
+            </g>
+          </g>
+          <g transform="translate(82, 42)">
+            <text id="logo-name" x="0" y="-16" font-family="'Bebas Neue', Impact, sans-serif" font-size="38" font-weight="400" fill="#00274c" text-anchor="start" dominant-baseline="middle" letter-spacing="1">Silas Falde</text>
+            <line class="header__logo-line" x1="0" y1="5" x2="200" y2="5" stroke="#ffcb05" stroke-width="4" stroke-linecap="round" />
+            <text x="0" y="17" font-family="Georgia, 'Times New Roman', serif" font-size="11" font-weight="400" fill="#00274c" opacity="0.7" text-anchor="start" dominant-baseline="middle">Data Science, AI, Machine Learning</text>
+          </g>
+        </svg>
+      </a>
+      <button type="button" class="header__menu-btn" id="header-menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="header-nav">
+        <span class="header__menu-icon" aria-hidden="true">
+          <span class="header__menu-bar"></span>
+          <span class="header__menu-bar"></span>
+          <span class="header__menu-bar"></span>
+        </span>
+      </button>
+      <nav class="header__nav" id="header-nav" aria-label="Main">
+        <ul class="header__list">
+          <li><a href="#about" class="header__link">About</a></li>
+          <li><a href="#experience" class="header__link">Experience</a></li>
+          <li><a href="#education" class="header__link">Education</a></li>
+          <li><a href="#projects" class="header__link">Projects</a></li>
+          <li><a href="#skills" class="header__link">Skills</a></li>
+          <li><a href="#contact" class="header__link">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <article>
+        <header class="hero">
+          <div class="hero__video-wrap">
+            <div id="hero-video-player" class="hero__video"></div>
+          </div>
+          <div class="hero__overlay" aria-hidden="true"></div>
+          <div class="hero__signature-row">
+            <div class="hero__mute-btn-wrap" style="margin-left: 10px;">
+              <button type="button" class="hero__mute-btn" id="hero-mute-btn" aria-label="Unmute video" aria-pressed="false" title="Unmute video">
+                <svg class="hero__mute-icon hero__mute-icon--muted" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+                  <line x1="23" y1="9" x2="17" y2="15"/>
+                  <line x1="17" y1="9" x2="23" y2="15"/>
+                </svg>
+                <svg class="hero__mute-icon hero__mute-icon--unmuted" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+                  <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/>
+                </svg>
+              </button>
+            </div>
+            <div class="hero__signature">
+              <h1 class="hero__name">Silas Falde</h1>
+              <div class="hero__title-line-wrap">
+                <p class="hero__title">Data Science Student</p>
+                <div class="hero__signature-line" aria-hidden="true"></div>
+              </div>
+              <p class="hero__contact">
+                <a href="mailto:silas@silasfalde.com" class="hero__contact-link">silas@silasfalde.com</a>
+                <span class="hero__contact-sep"> · </span>
+                <a href="tel:5551234567" class="hero__contact-link">(555) 123-4567</a>
+              </p>
+            </div>
+          </div>
+        </header>
+
+        <div class="sections-wrap">
+          <section id="about" class="section">
+            <h2 class="section__title">About</h2>
+            <p class="section__text">I'm a Data Science major at the University of Michigan, focused on machine learning, statistical analysis, and turning data into clear, actionable insights. I enjoy building projects that bridge theory and practice.</p>
+          </section>
+
+          <section id="experience" class="section">
+            <h2 class="section__title">Experience</h2>
+            <ul class="timeline">
+              <li class="timeline__item">
+                <div class="timeline__header">
+                  <strong class="timeline__role">Data Science Intern</strong>
+                  <span class="timeline__org">Example Corp</span>
+                  <span class="timeline__meta">Remote · Summer 2024</span>
+                </div>
+                <ul class="timeline__bullets">
+                  <li>Built pipelines for cleaning and analyzing large datasets.</li>
+                  <li>Developed dashboards and reports for stakeholders.</li>
+                  <li>Applied statistical and ML methods to improve decision-making.</li>
+                </ul>
+              </li>
+              <li class="timeline__item">
+                <div class="timeline__header">
+                  <strong class="timeline__role">Research Assistant</strong>
+                  <span class="timeline__org">University of Michigan</span>
+                  <span class="timeline__meta">Ann Arbor, MI · 2023 – Present</span>
+                </div>
+                <ul class="timeline__bullets">
+                  <li>Supported research in data analysis and visualization.</li>
+                  <li>Prepared datasets and documented methodology.</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+
+          <section id="education" class="section">
+            <h2 class="section__title">Education</h2>
+            <div class="edu">
+              <div class="edu__header">
+                <strong class="edu__school">University of Michigan</strong>
+                <span class="edu__degree">B.S. Data Science</span>
+                <span class="edu__meta">Ann Arbor, MI · Expected 2026</span>
+              </div>
+              <p class="edu__coursework">
+                <strong>Relevant coursework:</strong> Data Structures &amp; Algorithms, Probability &amp; Statistics, Machine Learning, Data Science Methods, Linear Algebra
+              </p>
+            </div>
+          </section>
+
+          <section id="projects" class="section">
+            <h2 class="section__title">Projects</h2>
+            <ul class="projects">
+              <li class="projects__item">
+                <a href="https://github.com/faldeland" class="projects__name" target="_blank" rel="noopener noreferrer">Portfolio Project</a>
+                <p class="projects__desc">End-to-end data analysis and visualization project demonstrating data science workflow.</p>
+                <p class="projects__tech">Python · Pandas · Matplotlib · Jupyter</p>
+              </li>
+              <li class="projects__item">
+                <a href="https://github.com/faldeland" class="projects__name" target="_blank" rel="noopener noreferrer">ML Classification</a>
+                <p class="projects__desc">Classification model with feature engineering and evaluation metrics.</p>
+                <p class="projects__tech">Python · scikit-learn · NumPy</p>
+              </li>
+            </ul>
+          </section>
+
+          <section id="skills" class="section">
+            <h2 class="section__title">Skills</h2>
+            <dl class="skills">
+              <dt class="skills__cat">Languages</dt>
+              <dd class="skills__list">Python, R, SQL</dd>
+              <dt class="skills__cat">Tools</dt>
+              <dd class="skills__list">Jupyter, Git, Tableau, Excel</dd>
+              <dt class="skills__cat">Methods</dt>
+              <dd class="skills__list">Machine Learning, Statistical Modeling, Data Visualization, ETL</dd>
+            </dl>
+          </section>
+
+          <section id="contact" class="section">
+            <h2 class="section__title">Contact</h2>
+            <p class="section__text">
+              <a href="mailto:silas@silasfalde.com">silas@silasfalde.com</a>
+              · <a href="https://linkedin.com/in/silasfalde" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              · <a href="https://github.com/faldeland" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </p>
+          </section>
+        </div>
+      </article>
+    </main>
+
+    <footer id="bottom" class="footer">
+      <div class="footer__inner">
+        <p class="footer__copyright">© <span id="footer-year"></span> Silas Falde</p>
+        <ul class="footer__links">
+          <li><a href="https://github.com/faldeland" class="footer__link" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://linkedin.com/in/silasfalde" class="footer__link" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a href="mailto:silas@silasfalde.com" class="footer__link" target="_blank" rel="noopener noreferrer">Email</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <a id="scroll-indicator" href="#about" class="scroll-indicator" aria-label="Scroll to next section">
+      <span class="scroll-indicator__label">Scroll</span>
+      <svg class="scroll-indicator__arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M12 5v14M19 12l-7 7-7-7" />
+      </svg>
+    </a>
+
+    <script src="js/main.js"></script>
+    <script src="js/logo.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/video.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+  </body>
+</html>

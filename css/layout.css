@@ -1,0 +1,219 @@
+/**
+ * Page layout: main, header, footer, section shell, scroll indicator.
+ */
+
+.main {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-md);
+  padding-bottom: var(--space-3xl);
+  position: relative;
+  flex: 1 0 auto;
+  z-index: 1;
+  background: var(--color-bg);
+}
+
+.main::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -50vw;
+  width: 100vw;
+  background: var(--color-bg);
+}
+
+/* Header */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-md) var(--space-lg);
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header__brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.header__brand:hover {
+  opacity: 0.9;
+}
+
+.header__logo {
+  display: block;
+  height: 54px;
+  width: auto;
+}
+
+.header__logo-line {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+body.hero-in-view .header__brand .header__logo-line,
+.header__brand.hero-in-view .header__logo-line {
+  opacity: 1 !important;
+}
+
+/* Hamburger: hidden on desktop, shown only in responsive.css at 768px */
+.header__menu-btn {
+  display: none;
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+}
+
+.header__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm) var(--space-lg);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header__link {
+  font-family: 'Bebas Neue', Impact, sans-serif;
+  font-size: 1.125rem;
+  letter-spacing: 0.02em;
+  color: var(--color-text-muted);
+  text-decoration: none;
+}
+
+.header__link:hover {
+  color: var(--color-accent);
+}
+
+.header__link.active {
+  color: #00274c;
+  text-decoration: none;
+  border-bottom: 3px solid #ffcb05;
+}
+
+/* Footer */
+.footer {
+  margin-top: auto;
+  padding: var(--space-xl) var(--space-lg);
+  padding-bottom: calc(var(--space-xl) + 30px);
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  position: relative;
+  z-index: 5;
+}
+
+.footer__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+.footer__copyright {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.footer__links {
+  display: flex;
+  gap: var(--space-lg);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer__link {
+  font-size: 0.875rem;
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.footer__link:hover {
+  text-decoration: underline;
+}
+
+/* Section shell */
+.section {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - var(--header-height));
+  margin-bottom: var(--space-2xl);
+}
+
+.section__title {
+  font-family: 'Bebas Neue', Impact, sans-serif;
+  margin: 0 0 var(--space-lg);
+  padding-top: var(--space-3xl);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--color-text);
+  letter-spacing: 0.02em;
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+  position: fixed;
+  bottom: var(--space-lg);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  padding: var(--space-sm);
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 5;
+}
+
+.scroll-indicator--visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.scroll-indicator:hover {
+  color: var(--color-accent);
+}
+
+.scroll-indicator--hero {
+  color: #ffcb05;
+}
+
+.scroll-indicator--hero .scroll-indicator__arrow {
+  color: #ffcb05;
+}
+
+.scroll-indicator--hero:hover {
+  color: #ffd54f;
+}
+
+.scroll-indicator__arrow {
+  animation: scroll-indicator-bounce 1.5s ease-in-out infinite;
+}
+
+@keyframes scroll-indicator-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
+}
