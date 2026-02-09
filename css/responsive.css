@@ -34,7 +34,7 @@ body {
 
   /* Hamburger button */
   .header__menu-btn {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     width: 44px;
@@ -81,7 +81,7 @@ body {
 
   /* Mobile nav: slide-down panel below header */
   .header__nav {
-    display: none;
+    display: flex;
     position: absolute;
     top: 100%;
     left: 0;
